@@ -1,8 +1,23 @@
 import { FaPlus } from "react-icons/fa6";
-const FormAddToDo = ({ newTodo, setTodos, setNewTodo, todos }: any) => {
+import { Todo } from "../App";
+
+interface FormAddToDoProps {
+  newTodo: string;
+  setNewTodo: React.Dispatch<React.SetStateAction<string>>;
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  todos: Todo[];
+}
+
+const FormAddToDo = ({
+  newTodo,
+  setTodos,
+  setNewTodo,
+  todos,
+}: FormAddToDoProps) => {
   const handleChangeNewTodo = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewTodo(e.target.value);
   };
+
   const handleAddTodo = () => {
     if (newTodo === "") {
       alert("Please Enter Todo");

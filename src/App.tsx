@@ -9,15 +9,18 @@ export interface Todo {
   editing: boolean;
 }
 
+const KEY_LOCAL_STORAGE_TODO = "todos";
+
 const App = () => {
   const [todos, setTodos] = useState<Todo[]>(() => {
-    const storedTodos = getLocalStorage<Todo[]>("todos", []);
+    const storedTodos = getLocalStorage<Todo[]>(KEY_LOCAL_STORAGE_TODO, []);
     return storedTodos;
   });
+
   const [newTodo, setNewTodo] = useState<string>("");
 
   useEffect(() => {
-    setLocalStorage("todos", todos);
+    setLocalStorage(KEY_LOCAL_STORAGE_TODO, todos);
   }, [todos]);
 
   return (

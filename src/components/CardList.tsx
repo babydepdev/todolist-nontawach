@@ -1,7 +1,13 @@
 import { Todo } from "../App";
 import { FaPenToSquare, FaTrash } from "react-icons/fa6";
 
-const CardList = ({ item, index, setTodos, todos }: any) => {
+interface CardListProps {
+  item: Todo;
+  index: number;
+  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  todos: Todo[];
+}
+const CardList = ({ item, index, setTodos, todos }: CardListProps) => {
   const handleCheckTodo = (index: number) => {
     setTodos(
       todos.map((item: Todo, i: number) =>
