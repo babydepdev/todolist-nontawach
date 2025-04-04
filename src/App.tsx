@@ -24,8 +24,8 @@ const App = () => {
 
   const handleCheckTodo = (index: number) => {
     setTodos(
-      todos.map((todo, i) =>
-        i === index ? { ...todo, checked: !todo.checked } : todo
+      todos.map((item: Todo, i: number) =>
+        i === index ? { ...item, checked: !item.checked } : item
       )
     );
   };
@@ -45,7 +45,7 @@ const App = () => {
 
   const handleEditTodo = (index: number) => {
     setTodos(
-      todos.map((todo, i) =>
+      todos.map((todo: Todo, i: number) =>
         i === index ? { ...todo, editing: !todo.editing } : todo
       )
     );
@@ -56,12 +56,12 @@ const App = () => {
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     setTodos(
-      todos.map((todo, i) =>
+      todos.map((todo: Todo, i: number) =>
         i === index ? { ...todo, text: e.target.value } : todo
       )
     );
   };
-  console.log(todos);
+
   return (
     <div className="container mx-auto flex flex-col items-center justify-center h-screen">
       <h1 className="text-3xl font-bold mb-2">To Do List</h1>
