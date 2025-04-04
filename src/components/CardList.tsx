@@ -7,6 +7,7 @@ interface CardListProps {
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
   todos: Todo[];
 }
+
 const CardList = ({ item, index, setTodos, todos }: CardListProps) => {
   const handleCheckTodo = (index: number) => {
     setTodos(
