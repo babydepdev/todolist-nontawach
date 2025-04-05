@@ -1,3 +1,5 @@
+## 📂 How to run
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/babydepdev/todolist-nontawach.git
