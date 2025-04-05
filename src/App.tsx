@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 import { getLocalStorage, setLocalStorage } from "./utils/localStorageUtil";
 import FormAddToDo from "./components/FormAddToDo";
 import CardList from "./components/CardList";
-
-export interface Todo {
-  text: string;
-  checked: boolean;
-  editing: boolean;
-}
+import { Todo } from "./types/global.types";
 
 const KEY_LOCAL_STORAGE_TODO = "todos";
 

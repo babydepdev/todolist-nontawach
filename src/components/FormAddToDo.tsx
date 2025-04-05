@@ -1,12 +1,5 @@
 import { FaPlus } from "react-icons/fa6";
-import { Todo } from "../App";
-
-interface FormAddToDoProps {
-  newTodo: string;
-  setNewTodo: React.Dispatch<React.SetStateAction<string>>;
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
-  todos: Todo[];
-}
+import { FormAddToDoProps } from "../types/global.types";
 
 const FormAddToDo = ({
   newTodo,
