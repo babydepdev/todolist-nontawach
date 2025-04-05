@@ -1,4 +1,4 @@
-## How to run
+## 🛠 How to run
 
 ```bash
 # 1. Clone the repository
